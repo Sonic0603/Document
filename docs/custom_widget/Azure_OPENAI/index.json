@@ -1,1 +1,64 @@
-
+{
+  "eula": "",
+  "vendor": "SAP SIX",
+  "license": "",
+  "id": "sap.sac.six.openai",
+  "version": "1.0.0",
+  "name": "Open AI SAP SIX",
+  "newInstancePrefix": "OPENAI",
+  "description": "A custom widget to integrate chatGPT in SAC Analytic application",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "sap-sac-six-openai",
+      "url": "/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+		"width": {
+			"type": "integer",
+			"default": 1
+		},
+		"height": {
+			"type": "integer",
+			"default": 1
+		}
+  },
+  "methods": {
+		"post": {
+			"description": "Wrapper for jQuery post",
+			"parameters": [
+				{
+					"name": "clientId",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "clientSecret",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "APIUrl",
+					"type": "string",
+					"description": "https://azure-openai-serv-i057149.cfapps.eu12.hana.ondemand.com/api/v1/completions"
+				},
+				{
+					"name": "authUrl",
+					"type": "string",
+					"description": "https://<space_name>.authentication.eu12.hana.ondemand.com/oauth/token"
+				},
+				{
+					"name": "inputChat",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"returnType": "string"
+		}
+  },
+  "events": {
+  }
+}
